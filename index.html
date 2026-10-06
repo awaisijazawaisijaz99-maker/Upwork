@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upwork Clone</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="https://www.upwork.com/favicon.ico" />
+</head>
+
+<body class="site-body">
+
+    <div
+        class="site-header h-[55px] flex justify-center items-center sticky top-[0px] gap-[290px] bg-[white] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]">
+        <div class="site-header__inner flex w-[60%] justify-between items-center">
+            <div class="font-bold text-[18px]">Upwork</div>
+            <ul class="site-nav flex justify-evenly items-center w-[90%] ">
+                <div class="group ">
+                    <li class="nav-talent-dropdown h-[40px]  mt-[12px]"><span
+                            class="text-[15px] h-[40px] font-[600] hover:text-[green] cursor-pointer">Find
+                            talent</span><i class="fa-solid fa-angle-down text-[10px]"></i>
+                        <ul
+                            class="h-[530px]  w-[100%] absolute top-[50px] left-0 z-[50] bg-[#FFFFFF] flex justify-center items-center hidden  group-hover:block shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] border-t-1 border-[#E9E9E9]">
+                            <div class="w-[1366px] flex pt-7  ">
+                                <div
+                                    class="h-[470px]  border-solid w-[30%] border-e-2 border-[#A5A5A5] felx flex-col ps-[30px] pt-[30px]">
+                                    <div
+                                        class="h-[90px] w-[75%]  bg-[#F1F1F1] flex justify-center align-middle gap-[70px]">
+                                        <div>
+                                            <p class="text-[15px] font-sans  pt-[15px] ps-[8px]   font-[550]">Post a job
+                                                and
+                                                hire
+                                                a pro</p>
+                                            <p class="text-[15px] font-sans font-[600] text-[green] pt-[6px] ps-[8px]">
+                                                Talent
+                                                Marketplace</p>
+                                        </div>
+                                        <p><i class="fa-solid fa-chevron-right text-[13px] text-[green] pt-[37px]
+                                    ps-[5px]"></i></p>
+                                    </div>
+                                    <div
+                                        class="h-[90px] w-[75%]   flex justify-center align-middle gap-[70px] hover:bg-[#F1F1F1] cursor-pointer">
+                                        <div>
+                                            <p class="text-[15px] font-sans  pt-[15px] ps-[8px]   font-[550]">Browse and
+                                                buy
+                                                project</p>
+                                            <p class="text-[15px] font-sans font-[600] text-[green] pt-[6px] ps-[8px]">
+                                                Project
+                                                catalog</p>
+                                        </div>
+                                        <p><i class="fa-solid fa-chevron-right text-[13px] text-[green] pt-[37px]
+                                    ps-[5px]"></i></p>
+                                    </div>
+                                    <div
+                                        class="h-[90px] w-[75%]   flex justify-center align-middle gap-[35px] hover:bg-[#F1F1F1] cursor-pointer">
+                                        <div>
+                                            <p class="text-[15px] font-sans  pt-[15px] ps-[8px]   font-[550]">Get advice
+                                                from
+                                                industry expert</p>
+                                            <p class="text-[15px] font-sans font-[600] text-[green] pt-[6px] ps-[8px]">
+                                                Project
+                                                consultations</p>
+                                        </div>
+                                        <p><i class="fa-solid fa-chevron-right text-[13px] text-[green] pt-[37px]
+                                   pe-[20px] "></i> </p>
+                                    </div>
+                                </div>
+                                <div class="w-75% flex justify-between">
+                                    <div class=" ps-[60px]">
+                                        <div class="h-[4px] w-[50px] bg-[green]"></div>
+                                        <p class="text-[16px] font-[600] pt-[30px]">Talent Marketpalce <sup
+                                                class="text-[15px]">&trade;</sup> </p>
+                                        <p class="text-[14px] font-[500] leading-5 pt-[10px]">Learn about working with
+                                            talent or </p>
+                                        <p class="text-[14px] font-[500]">explore your specific hiring needs.</p>
+
+                                        <div class="pt-[15px]"><a href=""
+                                                class="text-[14px] font-[600] text-[green] underline  hover:no-underline cursor-pointer ">Hire
+                                                on talent
+                                                marketplace <i class="fa-solid fa-arrow-right ps-[10px]"></i></a></div>
+                                    </div>
+                                    <div class=" ps-[120px]  pt-[80px]">
+                                        <ul class=" pt-[10px] w-[100%]">
+                                            <li
+                                                class="text-[16px] font-[450] leading-9 rounded-[5px] ps-[15px] hover:bg-[#acacac] cursor-pointer">
+                                                Development
+                                                & It</li>
+                                            <li
+                                                class="text-[16px] font-[450] leading-9 rounded-[5px] ps-[15px] w-[100%]  hover:bg-[#acacac] cursor-pointer">
+                                                Design & Creative</li>
+                                            <li
+                                                class="text-[16px] font-[450] leading-9 rounded-[5px] ps-[15px] w-[100%] hover:bg-[#acacac] cursor-pointer">
+                                                Sales & Marketing</li>
+                                            <li
+                                                class="text-[16px] font-[450] leading-9 rounded-[5px] ps-[15px] w-[100%] hover:bg-[#acacac] cursor-pointer">
+                                                Writing & Translation</li>
+                                            <li
+                                                class="text-[16px] font-[450] leading-9 rounded-[5px] ps-[15px] w-[100%] hover:bg-[#acacac] cursor-pointer">
+                                                Admin & Customer support</li>
+                                            <li
+                                                class="text-[16px] font-[450] leading-9 rounded-[5px] ps-[15px] w-[100%] hover:bg-[#acacac] cursor-pointer">
+                                                Finance & Accounting</li>
+                                            <li
+                                                class="text-[16px] font-[450] leading-9 rounded-[5px] ps-[15px] w-[100%]  hover:bg-[#acacac] cursor-pointer">
+                                                HR & Training</li>
+                                            <li
+                                                class="text-[16px] font-[450] leading-9 rounded-[5px] ps-[15px] w-[100%]  hover:bg-[#acacac] cursor-pointer">
+                                                Legal</li>
+                                            <li
+                                                class="text-[16px] font-[450] leading-9 rounded-[5px] ps-[15px] w-[100%] hover:bg-[#acacac] cursor-pointer">
+                                                Engineering & Architecture</li>
+                                            <li
+                                                class="text-[16px] font-[450] leading- rounded-[5px] ps-[15px] w-[100%] hover:bg-[#acacac] cursor-pointer">
+                                                Hire freelancer</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                </div>
+                <div class="group">
+                    <li class="h-[40px]  mt-[12px] "><span
+                            class="text-[15px] font-[600] hover:text-[green] cursor-pointer">Find
+                            work</span><i class="fa-solid fa-angle-down text-[10px]"></i>
+                        <ul
+                            class="h-[250px]   w-[100%] absolute top-[50px] left-0 z-[2] bg-[#FFFFFF] flex items-center hidden group-hover:block shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] border-t-1 border-[#E9E9E9]">
+                            <div class="w-[90%] flex  items-center gap-[20px] pt-[40px]">
+                                <li class="w-[20%] h-[120px] ps-[20px] rounded-[5px] hover:bg-[#d1cfcf] cursor-pointer">
+                                    <p class="text-[14px] font-[550]  pt-[20px] ps-[15px]">Ways to earn</p>
+                                    <p class="text-[14px] leading-5 ps-[15px] pt-[8px]">Learn why Upwork has the right
+                                        opportuniteis for
+                                        you.</p>
+                                </li>
+                                <li class="w-[20%] h-[120px] rounded-[5px] hover:bg-[#d1cfcf] cursor-pointer">
+                                    <p class="text-[14px] font-[550]  pt-[20px] ps-[15px]">Find work for your skills</p>
+                                    <p class="text-[14px] leading-5 ps-[15px] pt-[8px]">Explore the kind of work
+                                        available
+                                        in
+                                        your field.</p>
+                                </li>
+                                <li class="w-[20%] h-[100px] rounded-[5px] hover:bg-[#d1cfcf] cursor-pointer">
+                                    <p class="text-[14px] font-[550]  pt-[20px] ps-[15px]">Win work with ads</p>
+                                    <p class="text-[14px] leading-5 ps-[15px] pt-[8px]">Get noticed by the right client.
+                                    </p>
+                                </li>
+                                <li class="w-[21%] h-[140px] rounded-[5px] hover:bg-[#d1cfcf] cursor-pointer">
+                                    <p class="text-[14px] font-[550]  pt-[20px] ps-[15px]">Join Freelancer Plus</p>
+                                    <p class="text-[14px] leading-5 ps-[15px] pt-[8px]">Access more Connects,get
+                                        strategic
+                                        insights on competitors,and try out latest tools</p>
+                                </li>
+                            </div>
+                        </ul>
+
+
+
+
+                    </li>
+                </div>
+                <div class="group">
+                    <li class="h-[40px]  mt-[12px]"><span
+                            class="text-[15px] font-[600] hover:text-[green] cursor-pointer">Why
+                            Upwork</span><i class="fa-solid fa-angle-down text-[10px]"></i>
+                        <ul
+                            class="h-[300px]   w-[100%] absolute top-[50px] left-0 z-[2] bg-[#FFFFFF]   hidden group-hover:block shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] border-t-1 border-[#E9E9E9]">
+                            <div class="flex justify-between pt-[30px]">
+                                <ul class="w-[50%] flex flex-wrap gap-[10px]">
+                                    <li
+                                        class="w-[40%] h-[110px] ps-[20px] rounded-[5px] hover:bg-[#d1cfcf] cursor-pointer">
+                                        <p class="text-[14px] font-[600]  pt-[20px] ps-[5px]">Success stories</p>
+                                        <p class="text-[13px] leading-5 ps-[5px] pt-[8px]">Discover how team work <br>
+                                            strategically grow together</p>
+                                    </li>
+                                    <li class="w-[40%] h-[110px] rounded-[5px] hover:bg-[#d1cfcf] cursor-pointer">
+                                        <p class="text-[14px] font-[600]  pt-[20px] ps-[20px]">Reviews</p>
+                                        <p class="text-[13px] leading-5 ps-[20px] pt-[8px]">See what it's like to
+                                            collaborate on <br> Upwork.
+                                        </p>
+                                    </li>
+                                    <li class="w-[40%] h-[110px] rounded-[5px] hover:bg-[#d1cfcf] cursor-pointer">
+                                        <p class="text-[14px] font-[550]  pt-[20px] ps-[20px]">How to hire</p>
+                                        <p class="text-[14px] leading-5 ps-[20px] pt-[8px]">Learn about different ways
+                                            to
+                                            get work done.
+                                        </p>
+                                    </li>
+                                    <li class="w-[40%] h-[110px] rounded-[5px] hover:bg-[#d1cfcf] cursor-pointer">
+                                        <p class="text-[14px] font-[550]  pt-[20px] ps-[20px]">How to fine work</p>
+                                        <p class="text-[14px] leading-5 ps-[20px] pt-[8px]">Learn about ho to grow
+                                            your independent career
+                                        </p>
+                                    </li>
+                                </ul>
+                                <div class="w-[50%] ">
+                                    <p class="text-[15px] font-[600] pt-[15px]">Featured resources</p>
+                                    <div
+                                        class="h-[40px] w-[53%] border-1 font-[500] rounded-[5px] border-[#A1A1A1] mt-[20px] text-[14px] ps-[28px] pt-[7px] hover:bg-[#A1A1A1] cursor-pointer">
+                                        How to
+                                        Hire Freelancer on Upwork.</div>
+                                    <div
+                                        class="h-[40px] w-[53%] border-1 font-[500] rounded-[5px] border-[#A1A1A1] mt-[15px] text-[14px] ps-[28px] pt-[7px] hover:bg-[#A1A1A1] cursor-pointer">
+                                        How to
+                                        use Upwork as a Freelancer.</div>
+                                    <div
+                                        class="h-[40px] w-[53%] border-1 font-[500] rounded-[5px] border-[#A1A1A1] mt-[15px] text-[14px] ps-[28px] pt-[7px] hover:bg-[#A1A1A1] cursor-pointer">
+                                        Grow Your Freelance Business.</div>
+                                    <div class="pt-[10px]"><a href=""
+                                            class="text-[14px] font-[600] text-[green] underline  hover:no-underline cursor-pointer ">More
+                                            resources <i class="fa-solid fa-arrow-right ps-[10px]"></i></a></div>
+                                </div>
+
+                            </div>
+                        </ul>
+                    </li>
+                </div>
+                <div class="group">
+                    <li class="h-[40px]  mt-[12px]"><span
+                            class="text-[15px] font-[600] hover:text-[green] cursor-pointer">What's
+                            new</span><i class="fa-solid fa-angle-down text-[10px]"></i>
+                        <ul
+                            class="h-[250px]   w-[100%] absolute top-[50px] left-0 z-[2]  bg-[#FFFFFF] flex items-center hidden  group-hover:block shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] border-t-1 border-[#E9E9E9]">
+                            <div class="w-[90%] flex  items-center gap-[20px] ps-[20px] pt-[40px] ">
+                                <li class="w-[20%] h-[110px] ps-[20px] rounded-[5px] hover:bg-[#d1cfcf] cursor-pointer">
+                                    <p class="text-[14px] font-[550]  pt-[20px] ps-[15px]">Upwork Updates</p>
+                                    <p class="text-[14px] leading-5 ps-[15px] pt-[8px]">Check out our latest products,
+                                        partners, nad enhancements .</p>
+                                </li>
+                                <li class="w-[20%] h-[110px] rounded-[5px] hover:bg-[#d1cfcf] cursor-pointer">
+                                    <p class="text-[14px] font-[550]  pt-[20px] ps-[15px]">Blog</p>
+                                    <p class="text-[14px] leading-5 ps-[15px] pt-[8px]">News and stories from the
+                                        world's
+                                        work marketplace.</p>
+                                </li>
+                                <li class="w-[20%] h-[110px] rounded-[5px] hover:bg-[#d1cfcf] cursor-pointer">
+                                    <p class="text-[14px] font-[550]  pt-[20px] ps-[15px]">Reseaech institute</p>
+                                    <p class="text-[14px] leading-5 ps-[15px] pt-[8px]">Insights and tools for business
+                                        leader navigating a new world of work.
+                                    </p>
+                                </li>
+                                <li class="w-[20%] h-[110px] rounded-[5px] hover:bg-[#d1cfcf] cursor-pointer">
+                                    <p class="text-[14px] font-[550]  pt-[20px] ps-[15px]">Release notes </p>
+                                    <p class="text-[14px] leading-5 ps-[15px] pt-[8px]">Our larest product news,
+                                        additions,
+                                        and improvements</p>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                </div>
+                <li><span class="text-[15px] font-[600] hover:text-[green]  cursor-pointer">Pricing</span></li>
+                <li><span class="text-[15px] font-[600] hover:text-[green] cursor-pointer">For enterprice</span> </li>
+            </ul>
+        </div>
+        <div class="site-header__actions w-[15%]  flex justify-center items-center gap-[30px]">
+            <div class=" text-[15px]  font-[550]">Log in</div>
+            <div
+                class="w-[48%] h-[38px] rounded-[8px] pt-[7px] text-[15px] text-[white] bg-[green] text-center font-[550] hover:bg-[#14A800] cursor-pointer  ">
+                Sign up
+            </div>
+        </div>
+        <button class="site-menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+    <div id="mobile-nav" class="mobile-nav" hidden>
+        <a href="">Find talent</a>
+        <a href="">Find work</a>
+        <a href="">Why Upwork</a>
+        <a href="">What's new</a>
+        <a href="">Pricing</a>
+        <a href="">For enterprise</a>
+        <a href="">Log in</a>
+        <a href="" class="mobile-nav__cta">Sign up</a>
+    </div>
+    <div class="site-main w-[100%]">
+        <div class="hero-shell w-[100%] flex flex-wrap justify-center mt-[50px]">
+            <div
+                class="hero-card h-[630px] w-[90%] bg-[url('https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/q_auto,h_630/v1741896805/brontes/hero/ApartmentCoder.jpg')] bg-cover bg-no-repeat rounded-[28px] ">
+                <div
+                    class="hero-title w-[60%] leading-18 text-[72px] font-[600] text-[white] pt-[40px] ps-[20px] ms-[40px]">
+                    Connecting
+                    clients in need to
+                    freelancers who deliver</div>
+                <div
+                    class="hero-search h-[245px] w-[55%] rounded-[20px] bg-[linear-gradient(to_right,#131416_5%,#1B1C20_15%,#383432_25%,#3C3632_40%,#40362D_60%,#443A35_75%,#4B4242_85%,#4D454A_100%)] ms-[59px] mt-[30px]">
+                    <div class="flex justify-center pt-[15px] ">
+                        <div class="h-[40px] w-[90%] text-end text-[white] mt-[15px]   bg-[#6C666B] rounded-4xl 
+                            flex justify-center">
+                            <div
+                                class="h-[40px] w-[50%] text-[white] text-center font-[550] pt-[5px] text-[17px] bg-[#6C666B] rounded-4xl border-2 border-[white] ">
+                                Find talent
+                            </div>
+                            <div
+                                class="h-[40px] w-[50%] text-[white] text-center font-[550] text-[18px] pt-[5px] bg-[#6C666B] rounded-4xl  ">
+                                Browse.jobs</div>
+
+
+                        </div>
+                    </div>
+                    <div class="flex justify-center pt-[15px]  ">
+                        <div class="h-[60px] w-[90%]  text-[white] border-2 border-[black]   bg-[white] rounded-4xl 
+                            flex justify-center">
+                            <div
+                                class="h-[35px] w-[70%] text-[#969696]  font-[450] ps-[9px] pt-[10px] text-[19px]  rounded-4xl border-2 border-[white] ">
+                                Search by role,skills or kewwords
+
+                            </div>
+                            <div
+                                class="h-[45px] w-[25%]   font-[550] text-[18px] pt-[2px] ps-2 bg-[#181818] rounded-4xl mt-[6px] hover:cursor-pointer  ">
+                                <i class="fa-solid fa-magnifying-glass text-[green] text-[25px] ms-[8px] mt-1"></i>
+                                <span class="text-[25px] text-[white] pb-2">Search</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center pt-[15px">
+                        <div class="h-[45px] w-[100%] flex justify-evenly items-center mt-[25px]">
+                            <div
+                                class="h-[22px] w-[100px] bg-[url('https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/q_auto/brontes/hero/logo-microsoft-grey.svg')] bg-cover bg-no-repeat">
+                            </div>
+                            <div
+                                class="h-[25px] w-[80px] bg-[url('https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/q_auto/brontes/hero/logo-airbnb-grey.svg')] bg-cover bg-no-repeat">
+                            </div>
+                            <div
+                                class="h-[25px] w-[40px] bg-[url('https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/q_auto/brontes/hero/logo-bissell-grey.svg')] bg-cover bg-no-repeat">
+                            </div>
+                            <div
+                                class="h-[20px] w-[100px] bg-[url('https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/q_auto/brontes/hero/logo-glassdoor.svg')] bg-cover bg-no-repeat">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="category-section w-[90%] mt-[50px]">
+                <div class="text-[45px] font-[500]">Explore millions of pros</div>
+                <div class="category-grid w-100% mt-10 flex flex-wrap gap-2 justify-between">
+                    <div
+                        class="category-card h-[192px] w-[19%] flex border-0 justify-center  content-center items-center rounded-[12px]   cursor-pointer ">
+                        <div class="h-[170px] w-[90%] border-2 border-[#E7E7E7] rounded-[10px] ps-[14px] pt-[20px] ">
+                            <div class="h-[160px] w-[80%] flex flex-col gap-5">
+                                <div>
+                                    <i class="fa-solid fa-code text-5xl text-[#43BD39]"></i>
+                                </div>
+                                <div class="text-[22px] font-[500]">Development & IT</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="category-card h-[192px] w-[19%] flex border-0 justify-center content-center items-center rounded-[12px]   cursor-pointer ">
+                        <div class="h-[170px] w-[95%] border-2 border-[#E7E7E7] rounded-[10px] ps-[14px] pt-[20px] ">
+                            <div class="h-[160px] w-[80%] flex flex-col gap-4">
+                                <div>
+                                    <i class="fa-solid fa-palette text-5xl text-[#43BD39]"></i>
+                                </div>
+                                <div class="text-[22px] font-[550]">Design & Creative</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="category-card h-[192px] w-[19%] flex border-0 justify-center content-center items-center rounded-[12px]   cursor-pointer ">
+                        <div class="h-[170px] w-[95%] border-2 border-[#E7E7E7] rounded-[10px] ps-[14px] pt-[20px] ">
+                            <div class="h-[160px] w-[80%] flex flex-col gap-4">
+                                <div>
+                                    <i class="fa-brands fa-openai text-5xl text-[#43BD39]"></i>
+                                </div>
+                                <div class="text-[22px] font-[550]">AI Services</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="category-card h-[192px] w-[19%] flex border-0 justify-center content-center items-center rounded-[12px]   cursor-pointer ">
+                        <div class="h-[170px] w-[95%] border-2 border-[#E7E7E7] rounded-[10px] ps-[14px] pt-[20px] ">
+                            <div class="h-[160px] w-[80%] flex flex-col gap-4">
+                                <div>
+                                    <i class="fa-regular fa-handshake text-5xl text-[#43BD39]"></i>
+                                </div>
+                                <div class="text-[22px] font-[550]">Sales & Marketing</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="category-card h-[192px] w-[19%] flex border-0 justify-center content-center items-center rounded-[12px]   cursor-pointer ">
+                        <div class="h-[170px] w-[95%] border-2 border-[#E7E7E7] rounded-[10px] ps-[14px] pt-[20px] ">
+                            <div class="h-[160px] w-[80%] flex flex-col gap-4">
+                                <div>
+                                    <i class="fa-solid fa-pen-nib text-5xl text-[#43BD39]"></i>
+                                </div>
+                                <div class="text-[22px] font-[550]">Writing & Translation</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="category-card h-[192px] w-[19%] flex border-0 justify-center content-center items-center rounded-[12px]   cursor-pointer ">
+                        <div class="h-[170px] w-[95%] border-2 border-[#E7E7E7] rounded-[10px] ps-[14px] pt-[20px] ">
+                            <div class="h-[160px] w-[80%] flex flex-col gap-4">
+                                <div>
+                                    <i class="fa-regular fa-user text-5xl text-[#43BD39]"></i>
+                                </div>
+                                <div class="text-[22px] font-[550]">Admin & Support</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="category-card h-[192px] w-[19%] flex border-0 justify-center content-center items-center rounded-[12px]   cursor-pointer ">
+                        <div class="h-[170px] w-[95%] border-2 border-[#E7E7E7] rounded-[10px] ps-[14px] pt-[20px] ">
+                            <div class="h-[160px] w-[80%] flex flex-col gap-4">
+                                <div>
+                                    <i class="fa-solid fa-building-columns text-5xl text-[#43BD39]"></i>
+                                </div>
+                                <div class="text-[22px] font-[550]">Finance & Accounting</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="category-card h-[192px] w-[19%] flex border-0 justify-center content-center items-center rounded-[12px]   cursor-pointer ">
+                        <div class="h-[170px] w-[95%] border-2 border-[#E7E7E7] rounded-[10px] ps-[14px] pt-[20px] ">
+                            <div class="h-[160px] w-[80%] flex flex-col gap-4">
+                                <div>
+                                    <i class="fa-solid fa-scale-balanced text-5xl text-[#43BD39]"></i>>
+                                </div>
+                                <div class="text-[22px] font-[550]">Legal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="category-card h-[192px] w-[19%] flex border-0 justify-center content-center items-center rounded-[12px]   cursor-pointer ">
+                        <div class="h-[170px] w-[95%] border-2 border-[#E7E7E7] rounded-[10px] ps-[14px] pt-[20px] ">
+                            <div class="h-[160px] w-[80%] flex flex-col gap-4">
+                                <div>
+                                    <i class="fa-solid fa-user-group text-5xl text-[#43BD39]"></i>
+                                </div>
+                                <div class="text-[22px] font-[550]">HR & Training</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="category-card h-[192px] w-[19%] flex border-0 justify-center content-center items-center rounded-[12px]   cursor-pointer ">
+                        <div class="h-[170px] w-[95%] border-2 border-[#E7E7E7] rounded-[10px] ps-[14px] pt-[20px] ">
+                            <div class="h-[160px] w-[80%] flex flex-col gap-4">
+                                <div>
+                                    <i class="fa-solid fa-compass-drafting text-5xl text-[#43BD39]"></i>
+                                </div>
+                                <div class="text-[22px] font-[550]">Engineering & Architecture</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="w-[90%]">
+                <div
+                    class="how-it-works-header w-[100%] h-[50px] flex justify-between items-center content-center mt-[60px]">
+                    <div class="text-[30px] font-[500] pt-1">How it works</div>
+                    <div
+                        class="how-it-works-toggle h-[40px] w-[25%] text-end border-1 border-[#8D8C8C] bg-[#F9F9F9] rounded-4xl flex justify-center items-center content-center hover:cursor-pointer">
+                        <div
+                            class="how-it-works-toggle__item how-it-works-toggle__item--active h-[38px] w-[50%] text-center font-[500] pt-[5px] text-[15px] bg-[#F9F9F9] rounded-4xl border-2 border-[black] ">
+                            For hiring
+                        </div>
+                        <div
+                            class="how-it-works-toggle__item h-[35px] w-[50%] text-center font-[500] text-[15px] pt-[5px] bg-[#F9F9F9] rounded-4xl">
+                            For finding work</div>
+                    </div>
+                </div>
+                <div class="feature-cards w-[100%] flex justify-center content-center items-center gap-5 mt-[50px]">
+                    <div class="feature-card w-[32%] h-[430px] group">
+                        <div
+                            class="relative w-[100%] h-[260px] overflow-hidden z-[-1] rounded-xl shadow-lg hover:cursor-pointer">
+                            <video class="w-full h-full object-cover hover:cursor-pointer" autoplay muted playsinline>
+                                <source
+                                    src="https://res.cloudinary.com/upwork-cloud-acquisition-prod/video/upload/brontes/hiw-v2/hiw-client.mp4"
+                                    type="video/mp4" />
+
+                            </video>
+
+                        </div>
+                        <div
+                            class="h-[40px] w-[40px] absolute top-[1640px] left-[390px]  text-center pt-[5px] bg-[white] rounded-4xl">
+                            | |
+                        </div>
+
+                        <div class="w-[90%] text-[22px] font-[500] mt-[20px] ps-2">
+                            Posting jobs is always free
+                        </div>
+                        <div class="feature-card__details">
+                            <div class="w-[100%] text-[14.5px] mt-[5px] text-[#868686]">Generate a job post with AI or
+                                create
+                                your
+                                own and
+                                filter talent matches</div>
+                            <div
+                                class="h-[40px] w-[100%] bg-[green] rounded-[5px] mt-[10px] text-[white] text-[17px] font-[500] pt-[8px] text-center hover:cursor-pointer ">
+                                Create a job
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-card w-[32%] h-[430px] group">
+                        <div
+                            class="relative w-[100%] h-[260px] overflow-hidden z-[-1]  rounded-xl shadow-lg hover:cursor-pointer">
+                            <div
+                                class="w-full h-full object-cover hover:cursor-pointer bg-[url('https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/f_auto,q_auto,h_270/brontes/hiw-v2/for_hiring_1.png')] bg-cover bg-no-repeat">
+                            </div>
+
+                        </div>
+                        <div class="w-[90%] text-[22px] font-[500] mt-[20px] ps-2">
+                            Get proposals and hire
+                        </div>
+                        <div class="feature-card__details">
+                            <div class="w-[100%] text-[14.5px] mt-[5px] text-[#868686]">Screen, interview, or book a
+                                consult with an expert before hiring</div>
+                            <div
+                                class="h-[40px] w-[100%] bg-[green] rounded-[5px] mt-[10px] text-[white] text-[17px] font-[500] pt-[8px] text-center hover:cursor-pointer ">
+                                Explore experts
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-card w-[32%] h-[430px] group">
+                        <div class=" w-[100%] h-[260px] overflow-hidden   rounded-xl shadow-lg hover:cursor-pointer">
+                            <div
+                                class="w-full h-full object-cover  bg-[url('https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/f_auto,q_auto/brontes/hiw-v2/for_hiring_3.png')] bg-cover bg-no-repeat">
+                            </div>
+
+                        </div>
+                        <div class="w-[90%] text-[22px] font-[500] mt-[20px] ps-2">
+                            Pay when work is done
+                        </div>
+                        <div class="feature-card__details">
+                            <div class="w-[100%] text-[14.5px] mt-[5px] text-[#868686]">Release payments after approving
+                                work, by milestone or upon project completion</div>
+                            <div
+                                class="h-[40px] w-[100%] bg-[green] rounded-[5px] mt-[10px] text-[white] text-[17px] font-[500] pt-[8px] text-center hover:cursor-pointer ">
+                                View pricing
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div
+                class="insights-section h-[530px] mt-[50px] overflow-hidden rounded-2xl w-[90%] flex justify-center items-center gap-2 bg-[#181818]">
+                <div class=" h-[500px] w-[49%] rounded-4xl border-2 border-[#181818] text-white background-1 ">
+                    <div class="flex  justify-center">
+                        <div class="p-10 rounded-2xl shadow-lg  ">
+                            <div class="mt-[50px]">
+                                <div class="text-[45px] font-[550] mb-4">Get insights into freelancer pricing</div>
+                                <p class="mb-6 text-[17px] fpnt-[500] text-gray-300">
+                                    We'll calculate the average cost for freelancers with the skills you need.
+                                </p>
+                            </div>
+                            <div
+                                class="h-[95px] w-[95%] bg-[#FFFFFF] rounded-[18px] mt-[30px]  z-[1] flex justify-start gap-35 ">
+                                <div class="text-[#AFAFAF] text-[13px] font-[450] pt-[10px] ps-[10px]">To start,
+                                    describe
+                                    what you need
+                                    done.</div>
+                                <div
+                                    class="h-[33px] rounded-4xl w-[100px] bg-[linear-gradient(to_right,#1A1B18_30%,#282B16_50%,#2E3315_70%,#282C16_100%)] flex items-center justify-center mt-[55px] ">
+                                    <div class="text-[15px]  pt-[0px] font-bold text-[white]">Next</div>
+                                    <i class="fa-brands fa-openai text-[15px] text-[#6E830D] ps-[10px]"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[49%] h-[530px]  background-image-1 ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="plans-shell w-[100%] flex justify-center items-center flex-wrap mt-[50px]">
+        <div
+            class="plans-section w-[95%] h-[420px] opacity-100 bg-[url('https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/v1745328156/brontes/graphic-lg.png')] bg-no-repeat bg-cover">
+            <div class="text-[30px] font-[500] text-[#212121] text-center pt-[50px] mt-[20px]">
+                Clients only pay after hiring
+            </div>
+            <div class="flex justify-center items-center mt-[50px]">
+                <div class="plans-grid w-[80%] flex justify-evenly items-center gap-6 ms-[50px]">
+                    <div class="group w-[33%]">
+                        <div
+                            class="bg-[#FFFFFF] border-1 boredr-[#ECF3EB] w-[100%] rounded-[14px] h-[360px] group-hover:border-[#108A00] group-hover:border-1 ">
+                            <div class="text-[#828282] text-[13px] font-[500] pt-[25px] ps-[30px] ">Marketplace</div>
+
+                            <div class="text-[20px] font-[500] ps-[30px] pt-[4px] ">
+                                5% fee after hiring
+                            </div>
+                            <div class="text-[15px] font-medium text-[#7e7e7e]  ps-[30px] pt-[10px]">
+                                For starting out on our global freelancer marketplace
+                            </div>
+                            <div class="mt-[10px]">
+                                <div
+                                    class="text-[14px] font-medium flex justify-center items-center mt-[10px]  ps-[30px]  gap-[8px]">
+                                    <i class="fa-solid fa-check"></i>Free to post jobs on our global freelance
+                                    marketplace
+                                </div>
+                                <div
+                                    class="text-[14px] font-medium flex justify-start items-center mt-[10px]  ps-[30px]  gap-[8px]">
+                                    <i class="fa-solid fa-check"></i>AI-powered features
+                                </div>
+                                <div
+                                    class="text-[14px] font-medium flex justify-start items-center mt-[10px]  ps-[30px]  gap-[8px]">
+                                    <i class="fa-solid fa-check"></i>Collaboration and project tracking tools
+                                </div>
+                            </div>
+                            <div class="flex justify-center mt-[50px]">
+                                <div
+                                    class="h-[35px] w-[80%] bg-[white] text-[#108A00] text-[16px] text-center pt-[4px] font-medium  rounded-[8px] border-1 border-[#108A00] cursor-pointer group-hover:bg-[#108A00] group-hover:text-[white] ">
+                                    Get
+                                    started for free</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group w-[33%]">
+                        <div
+                            class="bg-[#FFFFFF] border-1 boredr-[#ECF3EB] w-[100%] rounded-[14px] h-[360px] group-hover:border-[#108A00] group-hover:border-1 ">
+                            <div class=" pt-[25px] ps-[30px] w-[90%] flex justify-between items-center"><span
+                                    class="text-[#828282] text-[13px] font-[500]">BUSINESS PLUS</span>
+                                <div
+                                    class="h-[25px] w-[30%] text-center pt-[2px] bg-black rounded-4xl text-[white] text-[13px] font-[500]">
+                                    Popular</div>
+                            </div>
+
+                            <div class="text-[20px] font-[500] ps-[30px] pt-[4px] ">
+                                10% fee after hiring
+                            </div>
+                            <div class="text-[15px] font-medium text-[#7e7e7e]  ps-[30px] pt-[10px]">
+                                For growing businesses with premium features and support
+                            </div>
+                            <div class="mt-[10px]">
+                                <div
+                                    class="text-[14px] font-medium flex justify-start items-center mt-[10px]  ps-[30px]  gap-[8px]">
+                                    <i class="fa-solid fa-check"></i>Access to pre-screened top 1% of talent
+                                </div>
+                                <div
+                                    class="text-[14px] font-medium flex justify-start items-center mt-[10px]  ps-[30px]  gap-[8px]">
+                                    <i class="fa-solid fa-check"></i>Premium customer support 24/7
+                                </div>
+                                <div
+                                    class="text-[14px] font-medium flex justify-start items-center mt-[10px]  ps-[30px]  gap-[8px]">
+                                    <i class="fa-solid fa-check"></i>60 invites per job post
+                                </div>
+                            </div>
+                            <div class="flex justify-center mt-[65px]">
+                                <div
+                                    class="h-[35px] w-[80%] bg-[white] text-[#108A00] text-[16px] text-center pt-[4px] font-medium  rounded-[8px] border-1 border-[#108A00] cursor-pointer group-hover:bg-[#108A00] group-hover:text-[white] ">
+                                    Get
+                                    started for free</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group w-[33%]">
+                        <div
+                            class="bg-[#FFFFFF] border-1 boredr-[#ECF3EB] w-[100%] rounded-[14px] h-[360px] t group-hover:border-[#108A00] group-hover:border-1 group-hover:shadow-lg  ">
+                            <div class="text-[#828282] text-[13px] font-[500] pt-[25px] ps-[30px] ">ENTERPRISE
+                            </div>
+
+                            <div class="text-[20px] font-[500] ps-[30px] pt-[4px] ">
+                                Contact sales
+                            </div>
+                            <div class="text-[15px] font-medium text-[#7e7e7e]  ps-[30px] pt-[10px]">
+                                For scaling comprehensive solutions to the entire organization
+                            </div>
+                            <div class="mt-[10px]">
+                                <div
+                                    class="text-[14px] font-medium flex justify-center items-center mt-[10px]  ps-[30px]  gap-[8px]">
+                                    <i class="fa-solid fa-check"></i>Dedicated account and program management
+                                </div>
+                                <div
+                                    class="text-[14px] font-medium flex justify-start items-center mt-[10px]  ps-[30px]  gap-[8px]">
+                                    <i class="fa-solid fa-check"></i>SSO and integrations
+                                </div>
+                                <div
+                                    class="text-[14px] font-medium flex justify-start items-center mt-[10px]  ps-[30px]  gap-[8px]">
+                                    <i class="fa-solid fa-check"></i>Unlimited invites per job
+                                </div>
+                            </div>
+                            <div class="flex justify-center mt-[70px]">
+                                <div
+                                    class="h-[35px] w-[80%] bg-[white] text-[#108A00] text-[16px] text-center pt-[4px] font-medium  rounded-[8px] border-1 border-[#108A00] cursor-pointer group-hover:bg-[#108A00] group-hover:text-[white] ">
+                                    Get
+                                    started for free</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="h-[30px] w-[100%] mt-[80px] flex justify-center items-center">
+        <a href=""
+            class="w-[100%] h-[30px] text-[16px] font-[500] text-center mt-[160px] text-[green] no-underline hover:underline transition-all duration-200">
+            Compare all plan features
+        </a>
+    </div>
+    <div class="w-[100%] flex justify-center mt-[90px]">
+        <div class="w-[90%] text-[45px] font-[500] text-start">
+            Real results from clients
+
+        </div>
+    </div>
+    <div
+        class="reviews-section h-[930px] w-[100%] bg-[url('https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/v1746710030/brontes/reviews/reviews-graphic.jpg')] bg-[100% 100%] bg-no-repeat ">
+        <div class="flex justify-center gap-y-5">
+            <div class="w-[85%] flex justify-evenly gap-x-4 flex-wrap mt-10 ">
+                <div class="h-[380px] w-[32%] bg-[#FDFEFD] rounded-[8px] ">
+                    <div class="ps-2 pt-3">
+                        <i class="fa-solid fa-code text-[15px] text-[#2BCC4C] flex gap-10"></i>
+                        <span class="text-[15px] font-[500]">Dev & IT</span>
+
+                    </div>
+                    <div class="ps-2 mt-3">
+                        <p class="text-[17px] font-normal text-start text-[#606060]">"Haris came in and helped us
+                            transfer
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]">knowledge from our
+                            departing
+                            developer,</p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]"> meeting a serious
+                            deadline, without fail. His</p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]"> knowledge and experience are
+                            exceptional."
+                        </p>
+                    </div>
+                    <div class=" w-[60%] flex gap-1 ms-2 mt-3">
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                    </div>
+                    <div class="w-[90%] flex justify-between ms-2 mt-23 ">
+                        <div>
+                            <p class="text-[13px] font-[500] text-[#181818]">Work done by Haris S.</p>
+                            <p class="text-[13px] font-[500] text-[#181818]">Full-Stack Developer</p>
+                            <p class="text-[13px] font-[500] text-[#181818]">Apr 7, 2025</p>
+                        </div>
+                        <div
+                            class="h-[80px] w-[80px]  rounded-full bg-[url('https://www.upwork.com/profile-portraits/c1-D22wQKB2gWknjchhx-y0TRK2I69w_3I-zdWb0Hdd_ZRm02xEX5_EXGjxSeRDAC-')] bg-cover bg-no-repeat">
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[380px] w-[32%] bg-[#FDFEFD] rounded-[8px] border-">
+                    <div class="ps-2 pt-3">
+                        <i class="fa-solid fa-palette text-[15px] text-[#2BCC4C]"></i>
+                        <span class="text-[15px] font-[500]">Design & Creative</span>
+
+                    </div>
+                    <div class="ps-2 mt-3">
+                        <p class="text-[17px] font-normal text-start text-[#606060]">"Ezzan did an amazing job editing
+                            my
+                            videos—
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]">fast turnaround, great attention to
+                            detail, and</p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]"> very easy to work with. He follows
+                            directionss</p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]"> well and delivers high-quality
+                            work
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]"> consistently. Highly recommend
+                            him!"
+                        </p>
+                    </div>
+                    <div class=" w-[60%] flex gap-1 ms-2 mt-3">
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                    </div>
+                    <div class="w-[90%] flex justify-between ms-2 mt-20 ">
+                        <div>
+                            <p class="text-[13px] font-[500] text-[#181818]">Work done by Ezzan S.</p>
+                            <p class="text-[13px] font-[500] text-[#181818]">Short form and long form video editor <br>
+                                needed!
+
+                            </p>
+                            <p class="text-[13px] font-[500] text-[#181818]">Mar 14, 2025</p>
+                        </div>
+                        <div
+                            class="h-[80px] w-[80px]  rounded-full bg-[url('https://www.upwork.com/profile-portraits/c1m87NhiyuQ15oQXX3ytQtyhjR--fYDZJlpvd3naySyW7STPc2FZQipPzo7DMF2Hcg')] bg-cover bg-no-repeat">
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[380px] w-[32%] bg-[#FDFEFD] rounded-[8px] border-">
+                    <div class="ps-2 pt-3">
+                        <i class="fa-brands fa-openai text-[15px] text-[#2BCC4C]"></i>
+                        <span class="text-[15px] font-[500]">AI Services</span>
+
+                    </div>
+                    <div class="ps-2 mt-3">
+                        <p class="text-[17px] font-normal text-start text-[#606060]">"Rick is a fantastic AI/ML engineer
+                            with
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]">specialization in LLMs, delivering
+                            end-to-end</p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]">solutions. We had a few concepts
+                            when
+                            we</p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]"> started the work; ultimately, he
+                            delivered a
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]"> working solution. Looking forward
+                            to
+                            working
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]">with him again."</p>
+                    </div>
+                    <div class=" w-[60%] flex gap-1 ms-2 mt-3">
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                    </div>
+                    <div class="w-[90%] flex justify-between ms-2 mt-20 ">
+                        <div>
+                            <p class="text-[13px] font-[500] text-[#181818]">Work done by Richard C.</p>
+                            <p class="text-[13px] font-[500] text-[#181818]">LLM/RAG agent system development
+
+                            </p>
+                            <p class="text-[13px] font-[500] text-[#181818]">Mar 28, 2025</p>
+                        </div>
+                        <div
+                            class="h-[80px] w-[80px]  rounded-full bg-[url('https://www.upwork.com/profile-portraits/c13P5m6hdULPQEl9OSPZfOYN0Byn0O9XxsoJk7_bjJgdG9JjXK2Pqy1f9w9U6Lb2jR')] bg-cover bg-no-repeat">
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[420px] w-[32%] bg-[#FDFEFD] rounded-[8px] mt-[30px] ">
+                    <div class="ps-2 pt-3">
+                        <i class="fa-regular fa-handshake text-[15px] text-[#2BCC4C]"></i>
+                        <span class="text-[15px] font-[500]">Sales & Marketing</span>
+
+                    </div>
+                    <div class="ps-2 mt-1">
+                        <p class="text-[17px] font-normal text-start text-[#606060]">"We loved working with Jibran and
+                            his
+                            team
+                        <p class="text-[17px] font-normal text-start text-[#606060]">They are very professional and know
+                            what</p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]">they are doing. Very responsive and
+                            actually</p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]"> take the time to understand the
+                            project and
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]"> are very methodical and thoughtful
+                            about how
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]">to approach each project. They are
+                            very
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]">knowledgeable and creative. We will
+                            definitely</p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]">work with them again."</p>
+
+                    </div>
+                    <div class=" w-[60%] flex gap-1 ms-2 mt-1">
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                    </div>
+                    <div class="w-[90%] flex justify-between ms-2 mt-20 ">
+                        <div>
+                            <p class="text-[13px] font-[500] text-[#181818]">Work done by Jibran Z.</p>
+                            <p class="text-[13px] font-[500] text-[#181818]">Social media posts and marketing
+
+                            </p>
+                            <p class="text-[13px] font-[500] text-[#181818]">Mar 10, 2025</p>
+                        </div>
+                        <div
+                            class="h-[80px] w-[80px]  rounded-full bg-[url('https://www.upwork.com/profile-portraits/c1aS0EII9SWhVI5M3b5U0bbHMzX5Oyp2yaD_h5XBYqhnlzPdVpQO2Kfa9RGowKEDlG')] bg-cover bg-no-repeat">
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[420px] w-[32%] bg-[#FDFEFD] rounded-[8px]  mt-[30px]">
+                    <div class="ps-2 pt-3">
+                        <i class="fa-solid fa-pen-nib text-[15px] text-[#2BCC4C]"></i>
+                        <span class="text-[15px] font-[500]">Writing & Translation</span>
+
+                    </div>
+                    <div class="ps-2 mt-3">
+                        <p class="text-[17px] font-normal text-start text-[#606060]">"Michael is very skilled and highly
+                            professional.
+                        <p class="text-[17px] font-normal text-start text-[#606060]">Understood the assignment, followed
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]">instructions, and was also able to
+                            be
+                            flexible</p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]"> and creative. One of the rare
+                            copywriters I've
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]"> worked with who can come up with
+                            something
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]">outside the box, but still on
+                            brand.
+                            Would
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]">definitely hire him again!"</p>
+
+                    </div>
+                    <div class=" w-[60%] flex gap-1 ms-2 mt-3">
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                    </div>
+                    <div class="w-[90%] flex justify-between ms-2 mt-20 ">
+                        <div>
+                            <p class="text-[13px] font-[500] text-[#181818]">Work done by Michael L.</p>
+                            <p class="text-[13px] font-[500] text-[#181818]">Email marketing series to announce brand
+                                <br>
+                                launch
+
+                            </p>
+                            <p class="text-[13px] font-[500] text-[#181818]">Jan 31, 2025</p>
+                        </div>
+                        <div
+                            class="h-[80px] w-[80px]  rounded-full bg-[url('https://www.upwork.com/profile-portraits/c168o2zpN1Lavw3IM3oYDSovNhLClh5MsNQePMXlzAi2sao-NWOupAmiKT_e93tY9h')] bg-cover bg-no-repeat">
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[420px] w-[32%] bg-[#FDFEFD] rounded-[8px]  mt-[30px]">
+                    <div class="ps-2 pt-3">
+                        <i class="fa-regular fa-user text-[15px] text-[#2BCC4C]"></i>
+                        <span class="text-[15px] font-[500]">Admin & Customer Support</span>
+
+                    </div>
+                    <div class="ps-2 mt-3">
+                        <p class="text-[17px] font-normal text-start text-[#606060]">"Ahmed was a great asset to our
+                            team.
+                            He
+                        <p class="text-[17px] font-normal text-start text-[#606060]">brought a keen eye for
+                            inefficiencies,
+                            applied</p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]">process rigor, and expertly
+                            configured
+                            ClickUp</p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]"> to ensure sustainable usage and
+                            management
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]"> moving forward. His insights and
+                            structured
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]">approach have had a lasting impact
+                            on
+                            our
+                        </p>
+                        <p class="text-[17px] font-normal text-start text-[#606060]">workflows."</p>
+
+                    </div>
+                    <div class=" w-[60%] flex gap-1 ms-2 mt-3">
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                        <i class="fa-solid fa-star text-[12px] text-[#DF7606]"></i>
+                    </div>
+                    <div class="w-[90%] flex justify-between ms-2 mt-20 ">
+                        <div>
+                            <p class="text-[13px] font-[500] text-[#181818]">Work done by Ahmed A.</p>
+                            <p class="text-[13px] font-[500] text-[#181818]">Technical Project Manager
+
+                            </p>
+                            <p class="text-[13px] font-[500] text-[#181818]">Feb 5, 2025</p>
+                        </div>
+                        <div
+                            class="h-[80px] w-[80px]  rounded-full bg-[url('https://www.upwork.com/profile-portraits/c1qcYqh4wSnK0ifxobxuRaSuhXs4tUsMPO6Ny9-YucuonZStiSO_qbRlWqmilM-jdW')] bg-cover bg-no-repeat">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="cta-shell w-full flex justify-center mt-9">
+        <div
+            class="cta-banner w-[85%]  h-[210px] bg-gradient-to-r from-[#79E12A] to-[#2ACC5B] text-white p-8 rounded-xl text-center">
+            <p class="text-[35px] pt-3 font-medium text-[white]">Find your next hire for a short task or long-term
+                growth</p>
+            <div class="w-full flex justify-center mt-8 ">
+                <div
+                    class="h-[45px] w-[20%] rounded-[8px] bg-amber-50 text-center text-[black] text-[18px] font-medium pt-2">
+                    Explore Freelancer
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full flex justify-center items-center">
+        <div class="site-footer w-[95%] bg-[#181818] mt-25 h-[670px] rounded-[8px] flex justify-start flex-wrap">
+            <div class="h-540px w-[90%] mt-10  flex justify-evenly items-start">
+                <div class="h-auto w-24%">
+                    <p class="text-[16px] text-[#4A4A4A] font-medium">For clients</p>
+                    <ul class="mt-3 ">
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                How to hire
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Talent Marketplace
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Project Catalog
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Hire an agency
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Enterprise
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Business Plus
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Any Hire
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Contract-to-hire
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Direct Contracts
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Hire worldwide
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Hire in the USA
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="h-auto w-24%">
+                    <p class="text-[16px] text-[#4A4A4A] font-medium">For talent</p>
+                    <ul class="mt-3 ">
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                How to find work
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Direct Contracts
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Find freelance jobs worldwide
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Find freelance jobs in the USA
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Win work with ads
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Exclusive resources with Freelancer Plus
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="h-auto w-24%">
+                    <p class="text-[16px] text-[#4A4A4A] font-medium">Resources</p>
+                    <ul class="mt-3 ">
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Help &amp; Support
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Success stories
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Upwork reviews
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Resources
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Affiliate programme
+                            </a>
+                        </li>
+
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Free Business Tools
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Release notes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="h-auto w-[24%]">
+                    <p class="text-[16px] text-[#4A4A4A] font-medium">Company</p>
+                    <ul class="mt-3 ">
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                About us
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Leadership
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Investor relations
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Careers
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Our impact
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Press
+                            </a>
+                        </li>
+
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Contact us
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Partners
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Trust, safety &amp; security
+                            </a>
+                        </li>
+                        <li class="h-[35px]">
+                            <a href=""
+                                class="w-[100%] h-[30px] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Modern slavery statement
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full flex justify-center ">
+                <div class="w-[90%] flex justify-between ">
+                    <div class="w-[25%] ms-5 flex justify-between items-center">
+                        <p class="text-[#787878]">Follow us</p>
+                        <div class="w-[75%] flex justify-evenly items-center ">
+                            <div class="h-11 w-11 rounded-full bg-[#181818] hover:bg-[#252525] cursor-pointer "><i
+                                    class="fa-brands fa-facebook text-center text-[white] text-[22px] pt-[11px] ps-[12px] "></i>
+                            </div>
+                            <div class="h-11 w-11 rounded-full bg-[#181818] hover:bg-[#252525] cursor-pointer "><i
+                                    class="fa-brands fa-linkedin text-center text-[white] text-[22px] pt-[11px] ps-[12px] "></i>
+                            </div>
+                            <div class="h-11 w-11 rounded-full bg-[#181818] hover:bg-[#252525] cursor-pointer "><i
+                                    class="fa-brands fa-x-twitter text-center text-[white] text-[22px] pt-[11px] ps-[12px] "></i>
+                            </div>
+                            <div class="h-11 w-11 rounded-full bg-[#181818] hover:bg-[#252525] cursor-pointer "><i
+                                    class="fa-brands fa-youtube text-center text-[white] text-[22px] pt-[11px] ps-[12px] "></i>
+                            </div>
+                            <div class="h-11 w-11 rounded-full bg-[#181818] hover:bg-[#252525] cursor-pointer "><i
+                                    class="fa-brands fa-instagram text-center text-[white] text-[22px] pt-[11px] ps-[12px] "></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[25%] flex justify-start gap-3  items-center">
+                        <p class="text-[#787878]">Mobile app</p>
+                        <div class="w-[40%] flex justify-center gap-3">
+                            <div class="h-11 w-11 rounded-full bg-[#181818] hover:bg-[#252525] cursor-pointer "><i
+                                    class="fa-brands fa-apple text-center text-[white] text-[22px] pt-[11px] ps-[14px] "></i>
+                            </div>
+                            <div class="h-11 w-11 rounded-full bg-[#181818] hover:bg-[#252525] cursor-pointer "><i
+                                    class="fa-brands fa-android text-center text-[white] text-[22px] pt-[11px] ps-[10px] "></i>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex justify-center">
+                <hr class="w-[90%]  text-[#6b6b6b]">
+
+            </div>
+            <div class="w-full ms-17 flex justify-start gap-9 ">
+                <div class="w-90% flex justify-center gap-9">
+                    <div class="text-[#8E8E8E]">© 2015 - 2025 Upwork® Global LLC</div>
+                    <ul class="flex justify-center gap-5">
+                        <li class="">
+                            <a href=""
+                                class="w-[100%]  text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Terms of Service
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href=""
+                                class="w-[100%]  text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href=""
+                                class="w-[100%] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                CA Notice at Collection
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href=""
+                                class="w-[100%] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Your Privacy Choices
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href=""
+                                class="w-[100%] text-[16px]  text-center  text-[#E7E7E7] no-underline hover:underline transition-all duration-200">
+                                Accessibility
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="w-full bg-[white] h-[50px]"></div>
+
+
+
+    <script>
+        const menuButton = document.querySelector('.site-menu-button');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        if (menuButton && mobileNav) {
+            menuButton.addEventListener('click', () => {
+                const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+                menuButton.setAttribute('aria-expanded', String(!isOpen));
+                mobileNav.hidden = isOpen;
+            });
+        }
+    </script>
+
+</body>
+
+</html>
